@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProjectCard: View {
+    var project: Project
     
     var body: some View {
         ZStack(alignment: .leading) {
@@ -16,8 +17,8 @@ struct ProjectCard: View {
                 .opacity(0.7)
                 .shadow(radius: 10, x: 0, y: 4)
             
-            VStack(alignment: .leading, spacing: 10) {
-                Text("iOS Databases")
+            VStack(alignment: .leading, spacing: 15) {
+                Text(project.name)
                     .font(.bigHeadline)
                     .foregroundStyle(.white)
                 
@@ -25,16 +26,16 @@ struct ProjectCard: View {
                     Spacer()
                     StatBubbleView(title: "Hours",
                                    stat: "290",
-                                   gradientStart: Color.blue,
+                                   gradientStart: Color.skyBlue,
                                    gradientEnd: Color.navy)
                     StatBubbleView(title: "Sessions",
                                    stat: "34",
-                                   gradientStart: Color.green,
+                                   gradientStart: Color.turtleGreen,
                                    gradientEnd: Color.lime)
                     StatBubbleView(title: "Updates",
                                    stat: "32",
                                    gradientStart: Color.maroon,
-                                   gradientEnd: Color.purple)
+                                   gradientEnd: Color.fuschia)
                     StatBubbleView(title: "Wins",
                                    stat: "9",
                                    gradientStart: Color.maroon,
@@ -57,5 +58,5 @@ struct ProjectCard: View {
 }
 
 #Preview {
-    ProjectCard()
+    ProjectCard(project: Project())
 }
