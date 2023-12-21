@@ -57,9 +57,9 @@
 		715B373E2B3345AD008EAF31 /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				717C36852B34D9BA00175F88 /* Views */,
 				715B374D2B33468A008EAF31 /* Models */,
 				715B373F2B3345AD008EAF31 /* ProjectsApp.swift */,
-				715B37412B3345AD008EAF31 /* ProjectListView.swift */,
 				717C36822B34CA4D00175F88 /* Helpers */,
 				715B37432B3345AE008EAF31 /* Assets.xcassets */,
 				715B37452B3345AE008EAF31 /* Preview Content */,
@@ -90,6 +90,14 @@
 				717C36832B34CA6600175F88 /* FontHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		717C36852B34D9BA00175F88 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				715B37412B3345AD008EAF31 /* ProjectListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
