@@ -18,6 +18,7 @@
 		717C368B2B34DEC600175F88 /* StatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C368A2B34DEC600175F88 /* StatBubbleView.swift */; };
 		717C368D2B34E43800175F88 /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C368C2B34E43800175F88 /* AddProjectView.swift */; };
 		717C368F2B34EABC00175F88 /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C368E2B34EABC00175F88 /* ProjectDetailView.swift */; };
+		717C36912B34F73600175F88 /* ProjectUpdateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C36902B34F73600175F88 /* ProjectUpdateCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		717C368A2B34DEC600175F88 /* StatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatBubbleView.swift; sourceTree = "<group>"; };
 		717C368C2B34E43800175F88 /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
 		717C368E2B34EABC00175F88 /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
+		717C36902B34F73600175F88 /* ProjectUpdateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUpdateCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			children = (
 				717C36862B34DBD800175F88 /* ProjectCard.swift */,
 				717C368A2B34DEC600175F88 /* StatBubbleView.swift */,
+				717C36902B34F73600175F88 /* ProjectUpdateCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			files = (
 				715B37512B3346EB008EAF31 /* ProjectUpdate.swift in Sources */,
 				717C368B2B34DEC600175F88 /* StatBubbleView.swift in Sources */,
+				717C36912B34F73600175F88 /* ProjectUpdateCard.swift in Sources */,
 				717C368F2B34EABC00175F88 /* ProjectDetailView.swift in Sources */,
 				717C368D2B34E43800175F88 /* AddProjectView.swift in Sources */,
 				717C36842B34CA6600175F88 /* FontHelper.swift in Sources */,

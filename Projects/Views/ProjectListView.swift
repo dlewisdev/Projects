@@ -37,8 +37,6 @@ struct ProjectListView: View {
                             }
                         }
                     }
-                    
-                    
                 }
                 .padding()
                 
