@@ -9,11 +9,11 @@ import SwiftUI
 import SwiftData
 
 struct AddProjectView: View {
-    @State var projectName: String = ""
-    var project: Project
-    
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
+    @State var projectName: String = ""
+    
+    var project: Project
     
     var body: some View {
         ZStack {

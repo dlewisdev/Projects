@@ -9,8 +9,10 @@ import SwiftUI
 
 struct ProjectDetailView: View {
     @Environment(\.dismiss) private var dismiss
-    var project: Project
+    @State private var update: ProjectUpdate?
     
+    var project: Project
+   
     
     var body: some View {
         ZStack {
@@ -21,7 +23,7 @@ struct ProjectDetailView: View {
                 .frame(width: 1)
                 .padding(.leading, -150)
             
-            VStack {
+            VStack{
                 VStack(alignment: .leading, spacing: 13) {
                     Text(project.name)
                         .font(.screenHeading)
@@ -69,11 +71,9 @@ struct ProjectDetailView: View {
                 
                 ScrollView(showsIndicators: false) {
                     VStack(spacing: 27) {
-                        ProjectUpdateCard()
-                        ProjectUpdateCard()
-                        ProjectUpdateCard()
-                        ProjectUpdateCard()
-                        ProjectUpdateCard()
+                        ForEach(project.updates) { update in
+                            ProjectUpdateCard(update: update)
+                        }
                     }
                     .padding(.bottom, 100)
                         
@@ -88,6 +88,7 @@ struct ProjectDetailView: View {
                 HStack {
                     Button {
                         // Add project update
+                        self.update = ProjectUpdate()
                     } label: {
                         ZStack {
                             Circle()
@@ -115,6 +116,10 @@ struct ProjectDetailView: View {
             }
         }
         .navigationBarBackButtonHidden(true)
+        .sheet(item: $update) { update in
+            AddUpdateView(project: project, update: update)
+                .presentationDetents([.fraction(0.3)])
+        }
         
         
         

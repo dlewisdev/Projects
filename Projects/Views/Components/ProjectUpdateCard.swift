@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProjectUpdateCard: View {
+    var update: ProjectUpdate
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -16,9 +18,9 @@ struct ProjectUpdateCard: View {
             
             VStack(alignment: .leading, spacing: 10) {
                 HStack {
-                    Text("Thursday, December 21, 2023")
+                    Text(DateHelper.projectUpdateDate(inputDate: update.date))
                     Spacer()
-                    Text("9 Hours")
+                    Text("\(String(Int(update.hours))) Hours")
                 }
                 .padding(.horizontal)
                 .padding(.vertical, 7)
@@ -26,10 +28,10 @@ struct ProjectUpdateCard: View {
                     Color.orchid
                 }
                 
-                Text("Project headline")
+                Text(update.headline)
                     .font(.smallHeadline)
                     .padding(.horizontal)
-                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+                Text(update.summary)
                     .padding(.horizontal)
                     .padding(.bottom)
             }
@@ -39,9 +41,10 @@ struct ProjectUpdateCard: View {
             
         }
         .clipShape(RoundedRectangle(cornerRadius: 15))
+        .padding(.top, 10)
     }
 }
 
-#Preview {
-    ProjectUpdateCard()
-}
+//#Preview {
+//    ProjectUpdateCard()
+//}
