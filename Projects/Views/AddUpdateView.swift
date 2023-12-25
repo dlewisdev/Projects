@@ -41,7 +41,7 @@ struct AddUpdateView: View {
                         update.headline = headline
                         update.summary = summary
                         update.hours = Double(hours) ?? 0.0
-                        project.updates.append(update)
+                        project.updates.insert(update, at: 0)
                         
                         // Dismiss the sheet
                         dismiss()

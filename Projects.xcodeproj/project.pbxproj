@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7156DF142B3A33280068F46D /* EditFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7156DF132B3A33280068F46D /* EditFocusView.swift */; };
 		715B37402B3345AD008EAF31 /* ProjectsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715B373F2B3345AD008EAF31 /* ProjectsApp.swift */; };
 		715B37422B3345AD008EAF31 /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715B37412B3345AD008EAF31 /* ProjectListView.swift */; };
 		715B37442B3345AE008EAF31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715B37432B3345AE008EAF31 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7156DF132B3A33280068F46D /* EditFocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFocusView.swift; sourceTree = "<group>"; };
 		715B373C2B3345AD008EAF31 /* Projects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Projects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		715B373F2B3345AD008EAF31 /* ProjectsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsApp.swift; sourceTree = "<group>"; };
 		715B37412B3345AD008EAF31 /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				717C36892B34DEB700175F88 /* Components */,
 				715B37412B3345AD008EAF31 /* ProjectListView.swift */,
 				717C368C2B34E43800175F88 /* AddProjectView.swift */,
+				7156DF132B3A33280068F46D /* EditFocusView.swift */,
 				717C368E2B34EABC00175F88 /* ProjectDetailView.swift */,
 				717C36922B350E1A00175F88 /* AddUpdateView.swift */,
 			);
@@ -201,6 +204,7 @@
 			files = (
 				717C36952B35127900175F88 /* DateHelper.swift in Sources */,
 				715B37512B3346EB008EAF31 /* ProjectUpdate.swift in Sources */,
+				7156DF142B3A33280068F46D /* EditFocusView.swift in Sources */,
 				717C368B2B34DEC600175F88 /* StatBubbleView.swift in Sources */,
 				717C36912B34F73600175F88 /* ProjectUpdateCard.swift in Sources */,
 				717C368F2B34EABC00175F88 /* ProjectDetailView.swift in Sources */,

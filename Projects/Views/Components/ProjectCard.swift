@@ -43,14 +43,15 @@ struct ProjectCard: View {
                     Spacer()
                 }
                 
-                
-                Text("My current focus is...")
-                    .font(.featuredText)
-                    .foregroundStyle(.gray)
-                Text("Finish the iOS Databases course")
-                    .font(.featuredText)
-                    .foregroundStyle(.gray)
-                    .bold()
+                if project.focus.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
+                    Text("My current focus is...")
+                        .font(.featuredText)
+                        .foregroundStyle(.gray)
+                    Text(project.focus)
+                        .font(.featuredText)
+                        .foregroundStyle(.gray)
+                        .bold()
+                }
             }
             .padding()
         }
