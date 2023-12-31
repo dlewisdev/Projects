@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7156DF142B3A33280068F46D /* EditFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7156DF132B3A33280068F46D /* EditFocusView.swift */; };
+		7158C3042B41CBEC000A75E5 /* StatsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7158C3032B41CBEC000A75E5 /* StatsHelper.swift */; };
 		715B37402B3345AD008EAF31 /* ProjectsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715B373F2B3345AD008EAF31 /* ProjectsApp.swift */; };
 		715B37422B3345AD008EAF31 /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715B37412B3345AD008EAF31 /* ProjectListView.swift */; };
 		715B37442B3345AE008EAF31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715B37432B3345AE008EAF31 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		7156DF132B3A33280068F46D /* EditFocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFocusView.swift; sourceTree = "<group>"; };
+		7158C3032B41CBEC000A75E5 /* StatsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsHelper.swift; sourceTree = "<group>"; };
 		715B373C2B3345AD008EAF31 /* Projects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Projects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		715B373F2B3345AD008EAF31 /* ProjectsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsApp.swift; sourceTree = "<group>"; };
 		715B37412B3345AD008EAF31 /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				717C36832B34CA6600175F88 /* FontHelper.swift */,
 				717C36942B35127900175F88 /* DateHelper.swift */,
+				7158C3032B41CBEC000A75E5 /* StatsHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				717C36912B34F73600175F88 /* ProjectUpdateCard.swift in Sources */,
 				717C368F2B34EABC00175F88 /* ProjectDetailView.swift in Sources */,
 				717C368D2B34E43800175F88 /* EditProjectView.swift in Sources */,
+				7158C3042B41CBEC000A75E5 /* StatsHelper.swift in Sources */,
 				717C36842B34CA6600175F88 /* FontHelper.swift in Sources */,
 				715B37422B3345AD008EAF31 /* ProjectListView.swift in Sources */,
 				717C36872B34DBD800175F88 /* ProjectCard.swift in Sources */,

@@ -14,6 +14,9 @@ class Project {
     var name = ""
     var startDate = Date()
     var focus: String = ""
+    var hours: Double = 0
+    var sessions: Int = 0
+    var wins: Int = 0
     
     @Relationship(deleteRule: .cascade, inverse: \ProjectUpdate.project)
     var updates: [ProjectUpdate] = [ProjectUpdate]()

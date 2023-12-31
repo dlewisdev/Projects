@@ -25,19 +25,19 @@ struct ProjectCard: View {
                 HStack(alignment: .center, spacing: 13) {
                     Spacer()
                     StatBubbleView(title: "Hours",
-                                   stat: "290",
+                                   stat: String(Int(project.hours)),
                                    gradientStart: Color.skyBlue,
                                    gradientEnd: Color.navy)
                     StatBubbleView(title: "Sessions",
-                                   stat: "34",
+                                   stat: String(project.sessions),
                                    gradientStart: Color.turtleGreen,
                                    gradientEnd: Color.lime)
                     StatBubbleView(title: "Updates",
-                                   stat: "32",
+                                   stat: String(project.updates.count),
                                    gradientStart: Color.maroon,
                                    gradientEnd: Color.fuschia)
                     StatBubbleView(title: "Wins",
-                                   stat: "9",
+                                   stat: String(project.wins),
                                    gradientStart: Color.maroon,
                                    gradientEnd: Color.olive)
                     Spacer()

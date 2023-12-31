@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ProjectDetailView: View {
+    @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     @State private var newUpdate: ProjectUpdate?
     @State private var showEditFocus = false
@@ -33,19 +35,19 @@ struct ProjectDetailView: View {
                     HStack(alignment: .center, spacing: 13) {
                         Spacer()
                         StatBubbleView(title: "Hours",
-                                       stat: "290",
+                                       stat: String(Int(project.hours)),
                                        gradientStart: Color.skyBlue,
                                        gradientEnd: Color.navy)
                         StatBubbleView(title: "Sessions",
-                                       stat: "34",
+                                       stat: String(project.sessions),
                                        gradientStart: Color.turtleGreen,
                                        gradientEnd: Color.lime)
                         StatBubbleView(title: "Updates",
-                                       stat: "32",
+                                       stat: String(project.updates.count),
                                        gradientStart: Color.maroon,
                                        gradientEnd: Color.fuschia)
                         StatBubbleView(title: "Wins",
-                                       stat: "9",
+                                       stat: String(project.wins),
                                        gradientStart: Color.maroon,
                                        gradientEnd: Color.olive)
                         Spacer()
@@ -157,6 +159,13 @@ struct ProjectDetailView: View {
         update.headline = "Milestone Achieved"
         update.summary = project.focus
         project.updates.insert(update, at: 0)
+        
+        // Force a SwiftDate save
+        try? context.save()
+        
+        // Update the stats
+        StatsHelper.updateAdded(project: project, update: update)
+        
         // Clear the project focus
         project.focus = ""
     }
