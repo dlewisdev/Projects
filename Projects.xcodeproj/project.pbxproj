@@ -20,7 +20,7 @@
 		717C368D2B34E43800175F88 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C368C2B34E43800175F88 /* EditProjectView.swift */; };
 		717C368F2B34EABC00175F88 /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C368E2B34EABC00175F88 /* ProjectDetailView.swift */; };
 		717C36912B34F73600175F88 /* ProjectUpdateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C36902B34F73600175F88 /* ProjectUpdateCard.swift */; };
-		717C36932B350E1A00175F88 /* AddUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C36922B350E1A00175F88 /* AddUpdateView.swift */; };
+		717C36932B350E1A00175F88 /* EditUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C36922B350E1A00175F88 /* EditUpdateView.swift */; };
 		717C36952B35127900175F88 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C36942B35127900175F88 /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,7 @@
 		717C368C2B34E43800175F88 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		717C368E2B34EABC00175F88 /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
 		717C36902B34F73600175F88 /* ProjectUpdateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUpdateCard.swift; sourceTree = "<group>"; };
-		717C36922B350E1A00175F88 /* AddUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateView.swift; sourceTree = "<group>"; };
+		717C36922B350E1A00175F88 /* EditUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUpdateView.swift; sourceTree = "<group>"; };
 		717C36942B35127900175F88 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,7 +117,7 @@
 				717C368C2B34E43800175F88 /* EditProjectView.swift */,
 				7156DF132B3A33280068F46D /* EditFocusView.swift */,
 				717C368E2B34EABC00175F88 /* ProjectDetailView.swift */,
-				717C36922B350E1A00175F88 /* AddUpdateView.swift */,
+				717C36922B350E1A00175F88 /* EditUpdateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,7 +214,7 @@
 				717C36872B34DBD800175F88 /* ProjectCard.swift in Sources */,
 				715B37402B3345AD008EAF31 /* ProjectsApp.swift in Sources */,
 				715B374F2B33469B008EAF31 /* Project.swift in Sources */,
-				717C36932B350E1A00175F88 /* AddUpdateView.swift in Sources */,
+				717C36932B350E1A00175F88 /* EditUpdateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
