@@ -12,6 +12,8 @@ struct ProjectListView: View {
     @State private var newProject: Project?
     @Query private var projects: [Project]
     
+    @State private var selectedProject: Project?
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -27,13 +29,13 @@ struct ProjectListView: View {
                     ScrollView(showsIndicators: false) {
                         VStack(alignment: .leading, spacing: 26) {
                             ForEach(projects) { project in
-                                
-                                NavigationLink {
-                                    ProjectDetailView(project: project)
-                                } label: {
-                                    ProjectCard(project: project)
-                                }
-                                .buttonStyle(.plain)
+                                ProjectCard(project: project)
+                                    .onTapGesture {
+                                        selectedProject = project
+                                    }
+                                    .onLongPressGesture {
+                                        newProject = project
+                                    }
                             }
                         }
                     }
@@ -60,10 +62,17 @@ struct ProjectListView: View {
                     .padding(.leading)
                 }
             }
-            .sheet(item: $newProject) { project in
-                AddProjectView(project: project)
-                    .presentationDetents([.fraction(0.2)])
+            .navigationDestination(item: $selectedProject) { project in
+                ProjectDetailView(project: project)
             }
+                
+            
+        }
+        .sheet(item: $newProject) { project in
+            let isEdit = project.name.trimmingCharacters(in: .whitespacesAndNewlines) != ""
+            
+            EditProjectView(project: project, isEditMode: isEdit)
+                .presentationDetents([.fraction(0.2)])
         }
     }
 }
