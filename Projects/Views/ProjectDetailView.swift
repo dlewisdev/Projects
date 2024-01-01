@@ -35,19 +35,19 @@ struct ProjectDetailView: View {
                     HStack(alignment: .center, spacing: 13) {
                         Spacer()
                         StatBubbleView(title: "Hours",
-                                       stat: String(Int(project.hours)),
+                                       stat: project.hours,
                                        gradientStart: Color.skyBlue,
                                        gradientEnd: Color.navy)
                         StatBubbleView(title: "Sessions",
-                                       stat: String(project.sessions),
+                                       stat: Double(project.sessions),
                                        gradientStart: Color.turtleGreen,
                                        gradientEnd: Color.lime)
                         StatBubbleView(title: "Updates",
-                                       stat: String(project.updates.count),
+                                       stat: Double(project.updates.count),
                                        gradientStart: Color.maroon,
                                        gradientEnd: Color.fuschia)
                         StatBubbleView(title: "Wins",
-                                       stat: String(project.wins),
+                                       stat: Double(project.wins),
                                        gradientStart: Color.maroon,
                                        gradientEnd: Color.olive)
                         Spacer()
@@ -82,24 +82,38 @@ struct ProjectDetailView: View {
                         .clipShape(.rect(bottomLeadingRadius: 15, bottomTrailingRadius: 15))
                         .ignoresSafeArea()
                 }
-                
-                ScrollView(showsIndicators: false) {
-                    VStack(spacing: 27) {
-                        ForEach(project.updates.sorted(by: { u1, u2 in u1.date > u2.date})) { update in
-                            ProjectUpdateCard(update: update)
-                                .onTapGesture {
-                                    // Adding this to allow scrollview so long press gesture does not eat up taps
-                                }
-                                .onLongPressGesture {
-                                    newUpdate = update
-                                }
+                if project.updates.count > 0 {
+                    ScrollView(showsIndicators: false) {
+                        VStack(spacing: 27) {
+                            ForEach(project.updates.sorted(by: { u1, u2 in u1.date > u2.date})) { update in
+                                ProjectUpdateCard(update: update)
+                                    .onTapGesture {
+                                        // Adding this to allow scrollview so long press gesture does not eat up taps
+                                    }
+                                    .onLongPressGesture {
+                                        newUpdate = update
+                                    }
+                            }
                         }
-                    }
-                    .padding(.bottom, 100)
+                        .padding(.bottom, 100)
                         
+                    }
+                    .padding(.horizontal)
+                } else {
+                    // If there are no projects
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Button("Tap to add a new update") {
+                            newUpdate = ProjectUpdate()
+                        }
+                        .buttonStyle(.bordered)
+                        .foregroundStyle(.white)
+                        .padding(.bottom, 100)
+                        Spacer()
+                    }
+                    Spacer()
                 }
-                .padding(.horizontal)
-                
             }
             
             VStack {

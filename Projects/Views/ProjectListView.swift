@@ -25,19 +25,33 @@ struct ProjectListView: View {
                     Text("Projects")
                         .font(.screenHeading)
                         .foregroundStyle(.white)
-                    
-                    ScrollView(showsIndicators: false) {
-                        VStack(alignment: .leading, spacing: 26) {
-                            ForEach(projects) { project in
-                                ProjectCard(project: project)
-                                    .onTapGesture {
-                                        selectedProject = project
-                                    }
-                                    .onLongPressGesture {
-                                        newProject = project
-                                    }
+                    if projects.count > 0 {
+                        ScrollView(showsIndicators: false) {
+                            VStack(alignment: .leading, spacing: 26) {
+                                ForEach(projects) { project in
+                                    ProjectCard(project: project)
+                                        .onTapGesture {
+                                            selectedProject = project
+                                        }
+                                        .onLongPressGesture {
+                                            newProject = project
+                                        }
+                                }
                             }
                         }
+                    } else {
+                        // If there are no projects
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            Button("Tap to add a new project") {
+                                newProject = Project()
+                            }
+                            .buttonStyle(.bordered)
+                            .foregroundStyle(.white)
+                            Spacer()
+                        }
+                        Spacer()
                     }
                 }
                 .padding()
@@ -65,7 +79,7 @@ struct ProjectListView: View {
             .navigationDestination(item: $selectedProject) { project in
                 ProjectDetailView(project: project)
             }
-                
+            
             
         }
         .sheet(item: $newProject) { project in
